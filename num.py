@@ -1,4 +1,7 @@
 num = ['00', '00', '00', '00', '80', '10', '00', '00', '00']
+
+method 1:
+
 repeat = raw_input('please input a int: ')
 
 m = num * int(repeat)
@@ -14,4 +17,11 @@ for a, b in t.items():
 if len(m) > k:
     print(' '.join(m[k:]))
 
-
+method 2:
+m = num * 64
+we = [[m[a],m[a+1],m[a+2],m[a+3]] for a in range(len(m)) if a % 4 == 0]
+for i in we:
+    for a in i:
+        print(a, end=' ')
+    print('\n')
+     
